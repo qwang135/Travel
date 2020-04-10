@@ -3,7 +3,6 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import fastclick from 'fastclick'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'babel-polyfill'
 import store from './store'
@@ -13,7 +12,6 @@ import 'styles/iconfont.css'
 import 'swiper/css/swiper.css'
 
 Vue.config.productionTip = false
-fastclick.attach(document.body)
 Vue.use(VueAwesomeSwiper)
 
 /* eslint-disable no-new */
