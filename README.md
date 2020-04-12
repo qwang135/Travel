@@ -21,4 +21,4 @@ npm run build --report
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 ## Home Page Screenshot
-![](image/TravelHomePage.png)
+<img src="image/TravelHomePage.png" width="270" height="480">
