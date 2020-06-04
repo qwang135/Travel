@@ -6,10 +6,10 @@
         :src="bannerImg"
       />
       <div class="banner-info">
-        <div class="banner-title">{{this.sightName}}</div>
+        <div class="banner-title">{{sightName}}</div>
         <div class="banner-number">
           <span class="iconfont banner-icon">&#xe633;</span>
-          {{this.gallaryImgs.length}}
+          {{gallaryImgs.length}}
         </div>
       </div>
     </div>
@@ -25,6 +25,8 @@
 <script>
 import CommonGallary from 'common/gallary/Gallary'
 import FadeAnimation from 'common/fade/FadeAnimation'
+import { ref } from 'vue'
+
 export default {
   name: 'DetailBanner',
   props: {
@@ -33,22 +35,20 @@ export default {
     gallaryImgs: Array
 
   },
-  data () {
-    return {
-      showGallary: false
-    }
-  },
-  methods: {
-    handleBannerClick () {
-      this.showGallary = true
-    },
-    handleGallaryClose () {
-      this.showGallary = false
-    }
-  },
   components: {
     CommonGallary,
     FadeAnimation
+  },
+  setup() {
+    const showGallary = ref(false)
+
+    function handleBannerClick () {
+      showGallary.value = true
+    }
+    function handleGallaryClose () {
+      showGallary.value = false
+    }
+    return { showGallary, handleBannerClick, handleGallaryClose }
   }
 }
 </script>
